@@ -57,3 +57,49 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Here is Routes URL with Verb:
+
+1) Register: Verb:POST, URL:http://localhost:8000/api/register
+
+2) Login: Verb:POST, URL:http://localhost:8000/oauth/token
+	- Sample raw data
+
+	- {
+		"client_id": "2",
+		"client_secret": "Ha6NSXNotjN1ZUmGRdN9LlqShdd282i7swHfXNn1",
+		"grant_type": "password",
+		"username": "user@gmail.com",
+		"password": "user2123",
+		"scope": "*"
+	}
+
+3) Show Login User: Verb:GET, URL:http://localhost:8000/api/user
+	
+	'headers' => [
+	    'Accept' => 'application/json',
+	    'Content-Type' => 'application/json',
+	    'Authorization' => 'Bearer '.$accessToken,
+	]
+
+4) Update: Verb:POST, URL:http://localhost:8000/api/update_user?name=name&email=example@gmail.com&password=pwd&id=2
+
+5) Delete: Verb:DELETE, URL:http://localhost:8000/api/delete_user?id=2
+
+6) Artical Store: Verb:POST, URL:http://localhost:8000/api/artical/store?title=title&content=content
+
+7) Artical List: Verb:GET, URL:http://localhost:8000/api/artical/index
+
+8) Artical Show: Verb:GET, URL:http://localhost:8000/api/artical/6666
+
+9) Artical Update: Verb:PATCH, URL:http://localhost:8000/api/artical/5?title=title&content=content
+
+10) Artical Destroy: Verb:DELETE, URL:http://localhost:8000/api/artical/5
+
+11) Post Store: Verb:POST, URL:http://localhost:8000/api/post/store?title=title&content=content
+
+12) Post List: Verb:GET, URL:http://localhost:8000/api/post/index
+
+13) Post Update: Verb:PATCH, URL:http://localhost:8000/api/post/3?title=title&content=content
+
+14) Post Destroy: Verb:DELETE, URL:http://localhost:8000/api/post/3
